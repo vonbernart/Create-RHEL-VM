@@ -9,3 +9,12 @@ New-VM -Name "Test-VM-Hyper-V" -MemoryStartupBytes 1GB -NewVHDPath d:\vms\Test-M
 Start-VM -Name "Test-VM-Hyper-V"
 
 Get-VM -Name "Test-VM-Hyper-V"
+
+Stop-VM -Name "Test-VM-Hyper-V" -Force
+
+Remove-VM -Name "Test-VM-Hyper-V" -Force
+
+Get-VM
+
+Remove-Item -Path D:\VMS\Test-M.vhdx -Force
+
