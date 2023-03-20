@@ -1,2 +1,2 @@
-# test
-Test git
+# Test GIT 2
+Test git 2
