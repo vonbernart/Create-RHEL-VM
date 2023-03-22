@@ -4,14 +4,13 @@ Get-Help New-VM -Examples
 
 $Credential=Get-Credential
 $VM="Test-VM-Hyper-V"
-$MSB="1GB"
-$NVP="\\DC01\data-e\vms\Test-VN\Test-M.vhdx"
-$NVSB="30GB"
+$MSB=1GB
+$NVSB=30GB
 $Switch="Extern"
 $PathISO="\\DC01\Data-E\ISO\AlmaLinux-8.iso"
 $VMServer="hv-lt-01"
-New-VM -Name $VM -MemoryStartupBytes $MSB -NewVHDPath $NVP -NewVHDSizeBytes $NVSB -Dynamic 
--SwitchName $Switch -Credential $Credential -ComputerName $VMServer
+New-VM -Name $VM -MemoryStartupBytes $MSB -NewVHDPath \\DC01\data-e\vms\Test-VN\Test-M.vhdx -NewVHDSizeBytes $NVSB 
+-Credential $Credential -ComputerName $VMServer
 
 Set-VMDvdDrive -VMName DC -ControllerNumber 3 -Path $PathISO
 
