@@ -18,6 +18,10 @@ Start-VM -Name "Test-VM-Hyper-V"
 
 # Get-VM -Name "Test-VM-Hyper-V"
 
+Get-Error
+
+
+
 # Stop-VM -Name "Test-VM-Hyper-V" -Force
 
 # Remove-VM -Name "Test-VM-Hyper-V" -Force
